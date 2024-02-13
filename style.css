@@ -20,11 +20,35 @@ body {
 } */
 
 /* pratice question 2 lecture 7 */
-.paras {
+/* .paras {
     color: crimson;
 }
 
 .newClass {
     background-color: aquamarine;
 }
+ */
 
+
+
+
+ /* LECTURE 8 EVENTS */
+ /* div {
+    height: 300px;
+    width:300px;
+    background-color: aquamarine;
+    margin: 10px;
+    border: 2px solid black;
+ } */
+
+
+ /* change mode */
+ .dark {
+    background-color: black;
+    color:white;
+ }
+
+ .light {
+    background-color: white;
+    color: black;
+ }

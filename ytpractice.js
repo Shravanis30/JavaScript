@@ -294,3 +294,87 @@
 // // practice 2
 // let para = document.querySelector("p");
 // para.classList.add("newClass");
+
+
+
+
+
+
+
+
+
+
+// LECTURE 8 EVENTS
+// let bt1 = document.querySelector("#bt1");
+// bt1.onclick = () => {
+//     console.log("it was clicked");
+// };
+
+// let btn2 = document.querySelector("bt2");
+// bt2.ondblclick = () => {
+//     console.log("its clicked twice")
+// };
+
+// let div = document.querySelector("div");
+// div.onmouseover = () => {
+//     console.log("you are inside the side");
+// };
+
+// let btn1 = document.querySelector("#bt1");
+// bt1.onclick = (evt) => {
+//     console.log(evt);
+//     console.log(evt.type);
+//     console.log(evt.target);
+//     console.log(evt.clientX, evt.clientY);
+// };
+
+// let btn2 = document.querySelector("#bt2");
+// bt2.addEventListener("dblclick", (evt) => {
+//     console.log("clicked twice");
+//     console.log(evt);
+
+// });
+
+
+// let btn1 = document.querySelector("#bt1");
+// bt1.addEventListener("click", (evt) => {
+//     console.log("clicked - handler 1");
+// });
+// bt1.addEventListener("click", (evt) => {
+//     console.log("clicked - handler 2");
+// });
+
+// const handler3 = () => {
+//     console.log("clicked - handler 3");
+// }
+
+// bt1.addEventListener("click", handler3);
+
+// bt1.addEventListener("click", (evt) => {
+//     console.log("clicked - handler 4");
+// });
+
+// bt1.removeEventListener("click", handler3);
+
+
+
+
+
+// pratice prb of chnaging mode
+let modeBtn = document.querySelector("#mode");
+let currentMode = "light"; // make it dark
+let body = document.querySelector("body")
+modeBtn.addEventListener("click", () => {
+    if(currentMode === "light") {
+        currentMode = "dark";
+        body.classList.remove("light");
+        body.classList.add("dark");
+    }
+    else {
+        currentMode = "light";
+        body.classList.remove("dark");
+        body.classList.add("light");
+    }
+
+    console.log(currentMode);
+})

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding:0;
+}
+header {
+    height:60px;
+    background-color: #0f1111;
+    color: white;
+    padding-top: 4px;
+}
+
+#mainName {
+    font-size: 25px;
+    color:orangered;
+    text-decoration: none;
+    padding:0px;
+}
+
+button {
+    background-color: #f08804;
+    color:white;
+    
+}
+ 
+#searchbar {
+    width:500px;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+
+}
+
+#Options {
+    display: inline-block;
+    width: 20px;
+}
+    
+footer {
+    background-color: #0f1111;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.content {
+    height: 80em;
+}
+
+.contentBox1 {
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgba(128, 243, 243, 0.5);
+
+}
+
+.contentBox2 {
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgba(195, 94, 128, 0.5);
+}
+
+.contentBox3 {
+    height: 100px;
+    width:100px;
+    border: 2px solid black;
+    display: inline-block;
+    background-color: rgba(251, 213, 85, 0.5);
+} 
+
+.BackToTop {
+    background-color: rgba(116, 91, 243, 0.5);
+    height: 30px;
+    text-align: center;
+    font-size: 20px;
+    padding: 5px;
+}
