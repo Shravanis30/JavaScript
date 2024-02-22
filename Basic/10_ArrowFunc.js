@@ -57,3 +57,5 @@ console.log(addThreeNumbers(5,8,4))
 
 const addname = (name) => ({name : "ttejuuu"})
 console.log(addname(name))
+
+
