@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level up 3</title>
+</head>
+<body style="background-Color: black; color: white", >
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+    <ul class="nameList" >
+        <li>jai sadguru</li>
+    </ul>
+    
+</body>
+<script>
+    // adding element to list item by using js
+    // traverse all element
+    function language(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}`;
+        document.querySelector('.language').appendChild(li);
+    }
+    language("python");
+    language("typescript");
+    language("MongoDB");
+
+    //optimise approch
+    function addOptiLanguage(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("cpp")
+
+    // edit 
+    const secondLang = document.querySelector("li:nth-child(2)");
+    // secondLang.innerHTML = "mojo"     (use nextnode or textcontent method instead of innerhtml)
+    const newli = document.createElement('li');
+    newli.textContent = "NextJS";
+    secondLang.replaceWith(newli);
+
+    // edit
+    const fifthLang = document.querySelector("li:nth-child(5)");
+    const newli1 = document.createElement('li');
+    newli1.textContent = "golang";
+    fifthLang.replaceWith(newli1)
+
+
+
+    function nameList (names) {
+        const li = document.createElement('li');
+        li.innerHTML = `${names}`;
+        document.querySelector('.nameList').appendChild(li);
+    }
+    nameList("shraavniii");
+    nameList("ttejuuu");
+    nameList("Tanu");
+    nameList("Sanju");
+    nameList("Deep");
+
+    function optimalNamesAdding (names) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(names));
+        document.querySelector('.nameList').appendChild(li);
+    }
+    optimalNamesAdding("hehehehehe")
+
+    // edit 
+    const firstName = document.querySelector(".nameList li:first-child");
+    firstName.outerHTML = '<li>Jai Jai Raghuvir Samarth</li>'    
+   
+
+    // remove (specify the class or else it will make change in 1st class)
+    const lastName = document.querySelector(".nameList li:last-child");
+    lastName.remove();
+    
+</script>
+</html>

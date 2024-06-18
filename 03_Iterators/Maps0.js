@@ -20,10 +20,10 @@ for (const [key, value] of map) {
 // in object
 
 const MyHeros = {
-    hero1 : "aai",
-    hero2 : "papa",
-    hero3 : "ttejuuu",
-    hero4 : "deep",
+    hero1 : "aai",   
+    hero2 : "papa",   
+    hero3 : "ttejuuu",   
+    hero4 : "deep",   
 
 }
 
