@@ -1,0 +1,37 @@
+body {
+    background-color: #0f0f0f;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+table,
+th,
+td {
+  border: 1px solid #e7e7e7;
+  padding: 5px;
+  text-align: center;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.insertTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+}
+   
+.key {
+    font-size: larger;
+    font-weight: 900 ;
+}

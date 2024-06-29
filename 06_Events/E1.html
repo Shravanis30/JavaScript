@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <div>
+        <ul id="Images">
+            <li><img width="200px" id="photoshop" src="img/shravani.jpg" alt="its me"></li>
+
+            <li><img width="200px" id="birthday" src="img/Birthday.jpg" alt="My Birthday"></li>
+
+            <li><img width="200px" id="brother" src="img/Brother.jpg" alt="WithBrother"></li>
+
+            <li><img width="200px" id="saree" src="img/SareePic.jpg" alt="saree"></li>
+
+            <li><img width="200px" id="ttejuuu" src="img/ttejuuu.jpg" alt="tejasPatil"></li>
+
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+            <!-- we can here also apply the event listener but this is the worst approch -->
+
+        </ul>
+    </div>
+</body>
+<script>
+    // // This Approch also cause prb as it gives less features 
+    // document.getElementById('saree').onclick = function () {
+    //     alert('Saree Picture clicked')
+    // }
+
+    // // best approch
+    // document.getElementById('ttejuuu').addEventListener('click', function () {
+    //     alert(`ttejuuu's picture clicked`)
+    // }, false)
+    // // false is default (its oh even if we wont write) but somethime is interview the program wont run if we dont use false 
+
+    // // attachEvent()    old approches 
+    // // jQuery - on 
+
+    // document.getElementById('brother').addEventListener('click', function (event) {
+    //     console.log(event)
+    // })
+
+
+    // // TO DO:-
+    // // tpe, timestamp, defaultPrevend, 
+    // // target, toElement , srcElemen, currrentTarge
+    // // clienrX, clientY, screenX, screenY
+    // // altkeym ctrlkey, shiftke, keCode, keyboradkey
+
+
+
+    // // event prpogation
+    // document.getElementById('Images').addEventListener('click', function (event) {
+    //     console.log("Clicked inside the unorder list")
+    // }, false)
+
+    // document.getElementById('photoshop').addEventListener('click', function (event) {
+    //     console.log("Clicked photoshop ")
+    // }, false)
+
+    // // while using false as the event prapogation the approach goes from inside to out (innear elemets message will be printed than outers)
+    // // while using true as the event prapogation the approach goes from outside to inside (outter elements message is printed than innears)
+    // // THIS IS USED AS PER THE PROAGRMMERS USE CASE
+    // // IT IS ALSO KNOWN AS BUBBLING EVENT
+
+
+    // document.getElementById('birthday').addEventListener('click', function (event) {
+    //     console.log("Clicked on bday")
+    //     event.stopImmediatePropagation() // this stop inside only it does not bubble ans go to outside event
+    // }, false)
+
+
+    // document.getElementById('google').addEventListener('click', function (event) {
+    //     event.preventDefault();
+    //     event.stopPropagation();
+    //     console.log('Google clicked');
+    // }, false)
+
+
+
+
+
+    // real live use of events
+
+
+    // here task is to disable a image on a click
+    document.querySelector('#Images').addEventListener('mouseover', function(event) {
+        // console.log(event);
+        // console.log(event.target);
+        // console.log(event.target.parentNode);
+
+        // const removeIt = event.target.parentNode;
+        // removeIt.remove();           // this both removes evenrything
+        // removeIt.parentNode.removeChild(removeIt);
+
+        console.log(event.target.tagName);
+        if(event.target.tagName === 'IMG') {
+            console.log(event.target.id);
+            const removeIt = event.target.parentNode;
+            removeIt.remove();
+        }
+
+    }, false)
+
+</script>
+
+</html>

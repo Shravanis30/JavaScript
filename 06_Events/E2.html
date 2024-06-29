@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>shraavniii</h1>
+    <button id="stop">stop</button>
+</body>
+<script>
+    // the work is exectued after certain interval of time which is given 
+    setTimeout(function() {
+        console.log("shraavniii")
+    },2000); // time is in mili second section
+
+    // this above can be also written as below
+    const sayttejuuu = function() {
+        console.log("ttejuuu")
+    }
+    setTimeout(sayttejuuu, 1000); // here the refernce have to pass not the function call
+
+
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "Shraavnii The Great";
+    }
+
+    const changingText = setTimeout(changeText, 3000);
+
+
+    // same like the setTimeout their is a function name clearTimeout here the timer settd before is cleared as soon as the function is call
+
+    // const dontChange = clearTimeout(changingText, 3000);
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changingText)
+        console.log('The Statement has been stopped');
+    })
+</script>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Shraavnii Learning js</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+
+</body>
+<script>
+    // It is same like setTimeout just the difference is it runs continously the same statement again n again
+    // while settimeout runs only once
+
+    // setInterval(function() {
+    //     console.log("shraavniii", Date.now())
+    // }, 1000)
+
+    const sayDate = function(str) {
+        console.log(str, Date.now());
+    }
+
+    let StartIt = setInterval(sayDate, 1000, "hie Shraavniii")
+
+    // const stopIt = clearInterval(StartIt)
+
+    document.querySelector("#stop").addEventListener("click", function() {
+        clearInterval(StartIt)
+    })
+
+    document.querySelector("#start").addEventListener("click", function() {
+        StartIt = setInterval(sayDate, 1000, "hie Shraavniii")
+        
+    })
+    
+</script>
+</html>
