@@ -1,0 +1,1 @@
+//  story after ES6

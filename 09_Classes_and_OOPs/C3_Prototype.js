@@ -50,3 +50,8 @@ console.log(anotherUsername.length);
 anotherUsername.trueLength();
 "ChaiAurCode".trueLength();
 "Sulakshana".trueLength();
+
+
+
+// in browser envirnoment : this refers to window
+// in node envirnoment : this refers to {}
