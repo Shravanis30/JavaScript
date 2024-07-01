@@ -33,7 +33,7 @@ const promiseThree = new Promise(function (resolve, reject) {
     }, 1000)
 })
 
-promiseThree.then(function(user) {
+promiseThree.then(function (user) {
     console.log(user);
 })
 
@@ -58,8 +58,66 @@ promiseFour.then((user) => {
     return user.username;
 }).then((username) => {            // chaining 
     console.log(username)
-}).catch(function(error){
+}).catch(function (error) {
     console.log(error)
 }).finally(() => {
     console.log('The promise is either resolved or rejected')
+})
+
+
+
+
+
+const promiseFive = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+        let error = true;
+        if (!error) {
+            resolve({ username: "ttejuuu", password: "ttejuuu123" })
+        }
+        else {
+            reject('ERROR: Something went wrong')
+        }
+    }, 1000)
+})
+
+async function consumePromiseFive() {
+    try {
+        const response = await promiseFive
+        console.log(response)
+    } catch (error) {
+        console.log(error)
+    }
+}
+consumePromiseFive();
+
+
+
+
+
+
+async function getAllUsers() {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/users')
+        const data = await response.json();
+        console.log(data);
+
+    } catch (error) {
+        console.log("E:", error)  
+    }
+}
+getAllUsers()
+
+
+
+
+// this is printed 1st then the before consolelogs what can be the reason?
+fetch('https://jsonplaceholder.typicode.com/users')
+.then((response) => {
+    return response.json()
+})
+.then((data) => {
+    console.log(data)
+})
+.catch((error)=> {
+    console.log(error);
 })
