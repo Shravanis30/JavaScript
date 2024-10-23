@@ -1,0 +1,24 @@
+<!-- Insert a image into a webpage write a script to display a message web the mouse is over a image. The coordinares of the mouse should be diplayed if the click attempted on the image -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events </title>
+    <script type="text/javaScript">
+        function my_fun1() {
+            points.innerText = "Now the mouse is moving";
+        }
+        
+        function my_fun2() {
+            points.innerText = "(" + event.offsetX + "," + event.offsetY + ")";
+        }
+    </script>
+</head>
+<body onmousemove="my_fun1()" onmousedown="my_fun2()">
+    <center>
+        <span id="points">(0,0)</span>
+    </br>
+    </br>
+        <img src="bappa.jpg" style="top: 50; height: 200px;">
+    </center>
+</body>
+</html>

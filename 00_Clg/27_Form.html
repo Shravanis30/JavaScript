@@ -1,0 +1,57 @@
+<!-- Form and Event Handling -->
+ <!-- 
+        form is a typical layout on the webpage by which a user can interact eith the webpage 
+        Typical components of forms ate text area check box, radio button and push button
+        This components of form are called as form controls or control. All this form content appear in the form tag.
+        The form has attribute action which get exectued when user click a button on the form 
+ -->
+<!-- Uses of form  -->
+ <!-- 
+        Forms are used to collect the information from customer or student for unline registration 
+        Forms are used for online survey
+        Forms are used for conducting online examination for getting feedback and so on 
+        The information present in the form is submitted to the server for further processing        
+-->
+<!-- Properties and methods of form  -->
+<!-- 
+    Attribute           Description
+1)  Action :-           It specifes the URL where the form should be submitted 
+2)  Method :-           get and post
+3)  Form Name :-        Name of the form 
+4)  Target:-            blank :- open the new window
+                        self  :- open in the same frame as it was click 
+                        parent :- open the parent frame set 
+                        top :- open in the full body of the window
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Page</title>
+</head>
+<body>
+    <form>
+        <b>Name: </b> <input type="text" size="20" value=""> <br />
+        <b>Address: </b> <input type="text" size="35" value=""> <br />
+        <input type="radio" name="authors" value="Web Programming">Web Programming <br />
+        <input type="radio" name="authors" value="Computer Network">Computer Network<br />
+        <input type="radio" name="authors" value="Software Engineering">Software Engineering<br />
+        <input type="radio" name="authors" value="Data Structure">Data Structure<br />
+        <b>Select favorite Author: </b>
+        <select name="MyMenu">
+            <option value="AAA">AAA</option>
+            <option value="BBB">BBB</option>
+            <option value="CCC">CCC</option>
+            <option value="DDD">DDD</option>
+        </select>
+        <br/>
+
+        <b>Comments:</b>
+        <textarea cols="30" rows="10" name="Comments">
+        </textarea>
+        <br/> <br/>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>

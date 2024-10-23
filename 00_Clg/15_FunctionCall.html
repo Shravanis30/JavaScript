@@ -1,0 +1,19 @@
+<!-- We can call one function from the another function this is called nested function -->
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <script type="text/javascript">
+        function A()
+        {
+            B();
+        }
+        function B()
+        {
+            alert("Inside function B() via function A()");
+        }
+    </script>
+    <title>Calling a function from html</title>
+ </head>
+ <body onload="A()" style="background-color: black ; color: whitesmoke;">
+ </body>
+ </html>

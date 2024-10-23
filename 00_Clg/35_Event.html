@@ -1,0 +1,23 @@
+<!-- Changing attribute value dynamically -->
+<!-- This Key word:- this keyword is used to refer the current object. This is not the variable its a keywor, you cannot change the value of this -->
+ 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>This keyword</title>
+    <script type="text/javascript">
+        function ChangeMe(Ele) {
+            Ele.style.background = 'pink'
+        }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        Enter RollNo:- <input type="text" name="rollNo" onchange="ChangeMe(this)" />
+        </br> </br>
+        Enter Name:- <input type="text" name="name" onchange="ChangeMe(this)" />
+        </br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

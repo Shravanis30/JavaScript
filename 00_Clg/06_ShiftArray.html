@@ -1,0 +1,27 @@
+<!-- Changing the element of an array 
+Shift method :-
+    The method removes the 1st element -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shift Method</title>
+</head>
+<body style="background-color: black; color: white;">
+    <script type="text/javascript">
+        a = new Array();
+        a[0] = 10;
+        a[1] = 20;
+        a[2] = 30;
+        a[3] = 40;
+        a[4] = 50;
+        document.write("<h4> The shift() method </h4>")
+        var num = a.shift();
+        document.write(num);
+        document.write("<h4>The element in array are...</h4>");
+        for(i=0; i< a.length; i++) {
+            document.write(a[i]+" ");
+        }
+    </script>
+</body>
+</html>
+ 

@@ -1,0 +1,27 @@
+<!-- Scope:- Sope is the block of area of program in which particular variable or argument is accesssiable 
+    scope is defined by using 2 types of variable 1) Local Scope 2) Gobal Scope 
+    Local Scope :- If a variable is defined inside the function then that variable is a local variable
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function A() {
+            var a = 100 // local variable
+            document.getElementById("id1").innerHTML = "From function A(): a = " + a
+        }
+        function B() {
+            document.getElementById("id2").innerHTML = "From function B(): a = " + a
+        }
+    </script>
+</head>
+<body>
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <script type="text/javascript">
+        A()
+        B()
+    </script>
+</body>
+
+</html>

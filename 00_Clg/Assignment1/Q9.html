@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Write a program to find the number which is palindrome or not
+        function isPalindrome(num) {
+            let orgNum = num;
+            let reverseNum = 0;
+
+            while (num > 0) {
+                let digit = num % 10;
+                reverseNum = (reverseNum * 10) + digit;
+                num = Math.floor(num / 10);
+            }
+
+            return orgNum === reverseNum;
+        }
+
+        let number = parseInt(prompt("Enter a number: "));
+        if (isPalindrome(number)) {
+            console.log("This is a palindrome number");
+        } else { 
+            console.log("Not a palindrome number");
+        }
+    </script>
+</body>
+
+</html>

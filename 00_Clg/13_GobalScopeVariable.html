@@ -1,0 +1,23 @@
+<!-- Gobal Scope:- A variable is called gobal variable , if it is defined outside the -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        var a = 100 // Gobal Variable
+        function A() {
+            document.getElementById("id1").innerHTML = "From function A(): a = " + a
+        }
+        function B() {
+            document.getElementById("id2").innerHTML = "From function B(): a = " + a
+        }
+    </script>
+</head>
+<body style="background-color: black; color: white;">
+    <p id="id1"></p>
+    <p id="id2"></p>
+    <script type="text/javascript">
+        A()
+        B()
+    </script>
+</body>
+</html>
